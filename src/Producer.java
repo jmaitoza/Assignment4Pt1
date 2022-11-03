@@ -17,10 +17,10 @@ public class Producer implements Runnable
             while(true)
             {
                 Random r = new Random();
-                var randomChar = (char)(r.nextInt(90-65)+65);
+                char randomChar = (char)(r.nextInt(90-65)+65);
                 System.out.println("Producer: " + randomChar);
                 buffer.put(String.valueOf(randomChar));
-                Thread.sleep(100);
+                Thread.sleep(500);
             }
        } catch (InterruptedException e)
        {
